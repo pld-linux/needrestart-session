@@ -10,6 +10,7 @@ Source0:	https://github.com/liske/needrestart-session/archive/v%{version}/%{name
 URL:		https://github.com/liske/needrestart-session
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	dbus
+Requires:	desktop-file-utils
 Requires:	grep
 Requires:	needrestart >= 2.0
 Requires:	polkit
@@ -35,6 +36,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+%update_desktop_database
+
+%postun
+%update_desktop_database
 
 %files
 %defattr(644,root,root,755)
