@@ -10,8 +10,10 @@ Source0:	https://github.com/liske/needrestart-session/archive/v%{version}/%{name
 URL:		https://github.com/liske/needrestart-session
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	dbus
+Requires:	grep
 Requires:	needrestart >= 2.0
 Requires:	polkit
+Requires:	procps
 Requires:	wmctrl
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
