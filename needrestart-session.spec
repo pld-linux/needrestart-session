@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.perl
 Summary:	check for processes need to be restarted in user sessions
 Name:		needrestart-session
 Version:	0.3
